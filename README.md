@@ -1,2 +1,3 @@
-# Test
+@echo off 
+Test
 Test
