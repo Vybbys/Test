@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dokument</title>
+</head>
+<script type="text/javascript">
+    function czas() {
+        var data = new Date(); 
+        var godzina = data.getHours(); 
+        var minuta = data.getMinutes(); 
+        var sekunda = data.getSeconds(); 
+
+        if (godzina < 10) {
+            godzina = "0" + godzina;
+        }
+        if (minuta < 10) {
+            minuta = "0" + minuta;
+        }
+        if (sekunda < 10) {
+            sekunda = "0" + sekunda;
+        }
+
+        document.querySelector(".mainUp").innerHTML = "Obecna godzina: " + godzina + " : " + minuta + " : " + sekunda;
+
+        setTimeout(czas, 1000); 
+    }
+    window.addEventListener("load", czas);
+    </script>
+<body>
+    <div class="main">
+        <div class="header">
+            <p>Wplyw koni na sytuacje gospodarcza w Polsce.</p>
+        </div>
+        <div class="body">
+            <div class="mainUp">
+                <p> </p>
+            </div>
+            <div class="bodyMain">
+                <ol>
+                    <li>Hodowla i handel konmi:</li>
+                    <ul>
+                        <li><b>Pozytywne aspekty:</b> Hodowla koni może generować dochody dla rolników i przedsiębiorców związanych z branżą koni, takich jak hodowcy, trenerzy i handlowcy.</li> <br />
+                        <li><b>Negatywne aspekty:</b> Jednakże, ze względu na specyficzny charakter rynku koni, zyski mogą być zmienną kategorią, a hodowla koni może wymagać znacznych inwestycji.</li>
+                    </ul>
+
+                    <li>Sporty konne:</li>
+                    <ul>
+                        <li><b>Pozytywne aspekty:</b> Organizacja imprez jeździeckich, zawodów i wystaw może przyciągać turystów, generować przychody z biletów i promować rozwój infrastruktury związanej z koniami.</li> <br />
+                        <li><b>Negatywne aspekty:</b> Wpływ może być ograniczony do określonych regionów, a infrastruktura i organizacja wymagają nakładów finansowych.</li> <br />
+                    </ul>
+
+                    <li>Turystyka i rekreacja: </li>
+                    <ul>
+                        <li><b>Pozytywne aspekty:</b> Konie mogą przyciągać miłośników koni, turystów jeździeckich oraz osób poszukujących aktywności rekreacyjnej.</li> <br />
+                        <li><b>Negatywne aspekty:</b> Wzrost turystyki konnej może być ograniczony do pewnych obszarów geograficznych.</li> <br />
+                    </ul>
+
+                    <li>Praca i zatrudnienie:</li>
+                    <ul>
+                        <li><b>Pozytywne aspekty:</b> Branża koni może generować miejsca pracy w obszarach związanych z hodowlą, treningiem, weterynarią, handlem oraz obsługą imprez jeździeckich.</li> <br />
+                        <li><b>Negatywne aspekty:</b> Specyfika pracy w tej branży może wymagać specjalistycznych umiejętności, co może ograniczyć dostęp do pracy dla niektórych osób.</li> <br />
+                    </ul>
+
+                </ol>
+            </div>
+            <div class="bodySec">
+                <img src="konik.jpg" alt="Obraz konika">
+            </div>
+        </div>
+        <div class="footer">
+            <p>Strone wykonal: <b>Imie i nazwisko autora</b>. Wszelkie prawa zastrzezone &copy;</p>
+        </div>
+    </div>
+</body>
+</html>
